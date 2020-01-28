@@ -28,7 +28,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
 gem 'figaro'
-gem 'dotenv-rails', groups: [:development, :test]
+
 gem 'cloudinary', '~> 1.12.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
@@ -57,7 +57,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
