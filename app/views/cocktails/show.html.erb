@@ -1,6 +1,9 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill if @cocktail.photo.attached? %>')">
+ <div class="banner-content">
+    <h1><%= @cocktail.name %></h1>
+  </div>
+</div>
 <div class="container">
-
-  <h1><%= @cocktail.name %></h1>
   <%= link_to "Back to all cocktails", cocktails_path %>
   <br>
   <%= link_to "Add some ingredients", new_cocktail_dose_path(@cocktail) %>
