@@ -4,11 +4,11 @@
   </div>
 </div>
 <div class="container">
-  <div class="row">
+  <div class="row d-flex align-items-center cool-2">
     <div class="col-sm-2">
       <img class="avatar-large" src="<%= cl_image_path @cocktail.photo.key if @cocktail.photo.attached? %>">
     </div>
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12 col-md-6 d-flex justify-content-center cool"  >
       <%= link_to "Back to all cocktails", cocktails_path %>
       <br>
       <%= link_to "Add some ingredients", new_cocktail_dose_path(@cocktail) %>
@@ -23,15 +23,15 @@
             <thead class="thead-dark">
               <th>Ingredient</th>
               <th>Description</th>
-              <th>Action</th>
+              <th class="cool-4">Action</th>
             </thead>
             <% @cocktail.doses.each do |dose| %>
               <tr>
                 <td><%= dose.ingredient.name %></td>
                 <td><%= dose.description %></td>
-                <td>
+                <td class="cool-3">
                   <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
-                    <i class="fa fa-trash destroy_dose"></i>
+                    <i class="fa fa-trash destroy_dose "></i>
                   <% end %>
                 </td>
               </tr>
