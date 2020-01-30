@@ -8,6 +8,8 @@
   margin: 8px;
   border: none;
   border-radius: 8px;
+  transition: transform .1s;
+
 }
 .card-description {
   position: absolute;
@@ -34,4 +36,7 @@
 
 .container {
   margin: 24px;
+}
+.card:hover {
+transform: scale(2);
 }
